@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="BobHomeWork_LaudableLayout.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BobHomeWork_LaudableLayout"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <!-- 果然用 stackpanel 对于自适应屏幕不好 我拉伸屏幕textbox 不会跟着拉伸 网上用grid 或者dockpanel来解决-->
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" >Bob Home Laudable Layout</TextBlock>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <TextBlock Width="100" Margin="20,10,20,10" VerticalAlignment="Center" FontSize="20">User Name</TextBlock>
+            <TextBox Margin="0,10,0,10" HorizontalAlignment="Stretch"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Stretch">
+            <TextBlock Width="100" Margin="20,10,20,10" VerticalAlignment="Center" FontSize="20">Email</TextBlock>
+            <TextBox Width="200" Margin="0,10,0,10" TextWrapping="NoWrap"  ></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Orientation="Horizontal">
+            <TextBlock Margin="20,10,20,10" Width="100" VerticalAlignment="Center" FontSize="20">Password</TextBlock>
+            <TextBox  Margin="0,10,0,10" Width="300" HorizontalAlignment="Stretch"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Orientation="Horizontal">
+            <Button Margin="20,10,20,10">SUBMIT</Button>
+        </StackPanel>
+    </Grid>
+</Page>
